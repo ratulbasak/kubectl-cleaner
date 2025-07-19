@@ -1,0 +1,7 @@
+deployment_replicas: 0        # optional
+job_completed_only: true      # optional
+pvc_phases: ["Released", "Lost"]
+secret_types: ["Opaque"]
+orphaned_secrets_only: true
+orphaned_configmaps_only: true
+older_than: 14                # optional, days

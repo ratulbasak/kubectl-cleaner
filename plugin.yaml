@@ -1,0 +1,18 @@
+apiVersion: krew.googlecontainertools.github.com/v1alpha2
+kind: Plugin
+metadata:
+  name: cleaner
+spec:
+  version: "v0.1.0"
+  homepage: https://github.com/ratulbasak/kubectl-cleaner
+  shortDescription: Safe, intelligent cleanup of unused Kubernetes resources.
+  description: |
+    Analyze and clean up stale Deployments, PVCs, orphaned Secrets/ConfigMaps, and Jobs in a namespace using an interactive TUI.
+  platforms:
+    - selector:
+        matchLabels:
+          os: darwin
+          arch: amd64
+      uri: https://github.com/ratulbasak/kubectl-cleaner/releases/download/v0.1.0/kubectl-cleaner_darwin_amd64.tar.gz
+      sha256: "1311746618d1d8dcf78c05916b501b965bdc0bb9b7a5a4eaed98642a27954274"
+      bin: kubectl-cleaner
